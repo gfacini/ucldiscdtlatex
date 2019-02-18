@@ -1,6 +1,8 @@
 # ucldiscdtlatex
 University College London (UCL) Centre for Doctoral Training (CDT) in Data Intensive Sciences (DIS) Group Project Report Template = UCLDISCDTLATEX
 
+*The current stable tag is 00-00-00*
+
 This package will provide a basic latex environment for Group Project Reports. The following gives instructions for downloading and setting up the package. This was tested with TeX Live 2018. Eariler version might have issues (it is time to update!) To check what version you have try `pdflatex --version`
 
 # Installing
@@ -16,6 +18,9 @@ Then clone the source
 
 ```
 git clone https://github.com/gfacini/ucldiscdtlatex
+cd ucldiscdtlatex
+git checkout tags/XX-YY-ZZ # see above for current tag
+cd ../
 ```
 
 If you have [ssh-keys set up](https://help.github.com/articles/generating-ssh-keys/), then you can clone over SSH instead of HTTPS:
@@ -24,27 +29,6 @@ If you have [ssh-keys set up](https://help.github.com/articles/generating-ssh-ke
 git clone git@github.com:gfacini/ucldiscdtlatex
 ```
 
-At this point, you have the FULL state of the code. You can run ``git log`` to view the recent changes (no more ChangeLog!).
-
-### Checking out a specific tag
-
-You can run ``git tag`` to view all current tags. You can checkout a specific tag (in a detached head state):
-
-```
-  cd ucldiscdtlatex
-  git checkout tags/XX-YY-ZZ
-  cd ../
-```
-
-or you can use:
-
-```
-  cd ucldiscdtlatex
-  git checkout -b XX-YY-ZZ tags/XX-YY-ZZ
-  cd ../
-```
-
-which switches you from master to a branch of the given version.
 
 # Setup
 The first step is to create a set of files from templates that can be customized for your report. These files can be saved in your own personal git repo. You should be ableo to update the uclcdtdislatex package without changing any of your custom files. The default basename is "mydocument". Make it something meaningful i.e. "ASOS_GroupProject" or whatever makes you happy.
@@ -84,6 +68,9 @@ The main file for the document is `mydocument.tex` or equivalent. Make the follo
   - Enter the authors and their affiliation including the Industry Partners participating in the project. 
   - The reference code `\DISRefCode{}` is a placeholder for now.
   
- ### The final version
+ ## The final version
  When the report is complete and has been reviewed by the CDT Management, please comment `\DISVersion{}` in the metadata file.
   
+
+# Editing the package
+If you have a question, contact Gabriel. If you see a problem with the package, either [create and issue](https://github.com/gfacini/ucldiscdtlatex/issues) or make the change and create pull request. 

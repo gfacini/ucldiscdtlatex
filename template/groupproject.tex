@@ -1,0 +1,66 @@
+%---------------------------------------------------------------------
+% This file provides a skeleton UCL DIS CDT report.
+% \pdfinclusioncopyfonts=1
+% This command may be needed in order to get \ell in PDF plots to appear. Found in
+% https://tex.stackexchange.com/questions/322010/pdflatex-glyph-undefined-symbols-disappear-from-included-pdf
+%---------------------------------------------------------------------
+% Specify where ATLAS LaTeX style files can be found.
+\newcommand*{\DISCDTLATEXPATH}{ucldiscdtlatex/latex/}
+% Use this variant if the files are in a central location, e.g. $HOME/texmf.
+%---------------------------------------------------------------------
+
+\documentclass[NOTE, disdraft=true, UKenglish]{\DISCDTLATEXPATH UCLCDTDISdoc}
+% The language of the document must be set: usually UKenglish or USenglish.
+% british and american also work!
+% Commonly used options:
+%  cdtdraft=true|false   This document is an UCL CDT DIS draft.
+%  paper=a4|letter       Set paper size to A4 (default) or letter.
+
+%---------------------------------------------------------------------% More packages:
+%\usepackage{biblatex}
+% Add you own definitions here (file dis-gp-defs.sty).
+%\usepackage{dis-gp-defs}
+%---------------------------------------------------------------------
+
+
+% Files with references for use with biblatex.
+% Note that biber gives an error if it finds empty bib files.
+%\addbibresource{dis-gp.bib}
+
+% Paths for figures - do not forget the / at the end of the directory name.
+\graphicspath{{ucldiscdtlatex/logos/}{ucldiscdtlatex/figures/}}
+
+
+%---------------------------------------------------------------------
+% Generic document information
+%---------------------------------------------------------------------
+% Title, abstract and document 
+\input{dis-gp-metadata}
+% Author and title for the PDF file
+\hypersetup{pdftitle={UCL CDT DIS Document},pdfauthor={The UCL CDT DIS}}
+
+%---------------------------------------------------------------------
+% Content
+%---------------------------------------------------------------------
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\clearpage
+
+%---------------------------------------------------------------------
+\newpage
+%---------------------------------------------------------------------
+\section{Introduction}
+\label{sec:introduction}
+%\input{introduction}
+%---------------------------------------------------------------------
+
+\section{Conclusion}
+\label{sec:conclusion}
+%\input{conclusion}
+%---------------------------------------------------------------------
+
+\end{document}

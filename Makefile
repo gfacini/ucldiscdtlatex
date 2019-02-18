@@ -123,7 +123,7 @@ dvips:	$(BASENAME).dvi
 
 help:
 	@echo "To create a new UCL CDT DIS Group Project note draft give the command:"
-	@echo "make newgpnote [BASENAME=mydocument]"
+	@echo "make newgp [BASENAME=mydocument]"
 	@echo ""
 	@echo "To compile the paper give the command"
 	@echo "make"

@@ -328,7 +328,7 @@
 % \addtolength{\abstractparbox}{-2\fboxrule}
 % \addtolength{\abstractparbox}{-2\fboxsep}
 \newlength{\abstractheight}
-\setlength{\abstractheight}{0.50\textheight}
+\setlength{\abstractheight}{0.30\textheight}
 \addtolength{\abstractheight}{-\ADOC@titleextraheight}
 \newlength{\copyrightoffset}
 \ifthenelse{\equal{\ADOC@maintitlesize}{small}}{%

@@ -52,7 +52,7 @@ default: run_pdflatex
 # default: run_latexmk
 
 .PHONY: run_latexmk
-.PHONY: newgpnote newnotemetadata newgpfiles copymakefile
+.PHONY: talk newgpnote newnotemetadata newgpfiles copymakefile
 .PHONY: clean cleanpdf help
 
 # Standard pdflatex target
@@ -78,25 +78,31 @@ run_latexmk:
 new: newgp
 
 newgp: TEMPLATE=groupproject
-newgp: newgpnote newgpfiles newnotemetadata copymakefile
+newgp: talk newgpnote newgpfiles newnotemetadata copymakefile
+
+talk:
+	@echo "Making new report template with name $(BASENAME)"; \
 
 newgpnote:
-	if [ $(TEXLIVE) -ge 2007 -a $(TEXLIVE) -lt 2100 ]; then \
+	@if [ $(TEXLIVE) -ge 2007 -a $(TEXLIVE) -lt 2100 ]; then \
+		echo "Main latex file  : $(DESTINATION)$(BASENAME).tex"; \
 	  sed s/dis-gp/$(BASENAME)/ template/$(TEMPLATE).tex > $(DESTINATION)$(BASENAME).tex; \
 	else \
 	  echo "Invalid value for TEXLIVE: $(TEXLIVE)"; \
 	fi
 
 newnotemetadata:
-	cp template/dis-$(TEMPLATE)-metadata.tex $(DESTINATION)$(BASENAME)-metadata.tex;
+	@echo "Metadata file    : $(DESTINATION)$(BASENAME)-metadata.tex";
+	@cp template/dis-$(TEMPLATE)-metadata.tex $(DESTINATION)$(BASENAME)-metadata.tex;
 
 newgpfiles:
-	echo "% Put you own bibliography entries in this file" > $(DESTINATION)$(BASENAME).bib;
-	touch $(DESTINATION)$(BASENAME)-defs.sty;
+	@echo "Bibliography file: $(DESTINATION)$(BASENAME).bib"; 
+	@echo "% Put you own bibliography entries in this file" > $(DESTINATION)$(BASENAME).bib;
+	@touch $(DESTINATION)$(BASENAME)-defs.sty;
 
 copymakefile:
-	echo "Add a makefile for the new report";
-	sed s/BASENAME\ =\ mydocument/BASENAME\ =\ $(BASENAME)/ Makefile > $(DESTINATION)Makefile;
+	@echo "Makefile         : $(DESTINATION)Makefile";
+	@sed s/BASENAME\ =\ mydocument/BASENAME\ =\ $(BASENAME)/ Makefile > $(DESTINATION)Makefile;
 
 run_latex: dvipdf
 

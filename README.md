@@ -1,7 +1,7 @@
 # ucldiscdtlatex
 University College London (UCL) Centre for Doctoral Training (CDT) in Data Intensive Sciences (DIS) Group Project Report Template = UCLDISCDTLATEX
 
-*The current stable tag is 00-00-00*
+*The current stable tag is 00-00-01*
 
 This package will provide a basic latex environment for Group Project Reports. The following gives instructions for downloading and setting up the package. This was tested with TeX Live 2018. Eariler version might have issues (it is time to update!) To check what version you have try `pdflatex --version`
 

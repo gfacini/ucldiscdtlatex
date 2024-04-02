@@ -7,6 +7,9 @@ This package will provide a basic latex environment for Group Project Reports. T
 
 # Installing
 
+Below, goes through a local installation where you can sync as a team via git directly.
+
+You can also use [Overleaf](https://www.overleaf.com/read/szhcqfttdjjx#0fbf57). Fork the github repo and [sync github with overleaf](https://www.overleaf.com/learn/how-to/GitHub_Synchronization#Synchronizing_with_GitHub) and the full team and edit together via the web application (like Google docs but with latex). 
 
 ## Getting the Source
 

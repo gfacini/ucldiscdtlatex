@@ -5,7 +5,7 @@
 % https://tex.stackexchange.com/questions/322010/pdflatex-glyph-undefined-symbols-disappear-from-included-pdf
 %---------------------------------------------------------------------
 % Specify where LaTeX style files can be found.
-\newcommand*{\DISCDTLATEXPATH}{ucldiscdtlatex/latex/}
+\newcommand*{\DISCDTLATEXPATH}{latex/}
 % Use this variant if the files are in a central location, e.g. $HOME/texmf.
 %---------------------------------------------------------------------
 
@@ -30,14 +30,14 @@
 %--------------------------------------------------------------------- 
 
 % Paths for figures - do not forget the / at the end of the directory name.
-\graphicspath{{ucldiscdtlatex/logos/}{ucldiscdtlatex/figures/}}
+\graphicspath{{logos/}{figures/}}
 
 
 %---------------------------------------------------------------------
 % Generic document information
 %---------------------------------------------------------------------
 % Title, abstract and document 
-\input{dis-gp-metadata}
+\input{template/dis-groupproject-metadata}
 % Author and title for the PDF file
 \hypersetup{pdftitle={UCL CDT DIS Document},pdfauthor={The UCL CDT DIS}}
 
@@ -56,9 +56,9 @@
 %---------------------------------------------------------------------
 \newpage
 %---------------------------------------------------------------------
-\section{Layperson Summary}
+\section{CEO Summary}
 \label{sec:summary}
-In less than 1000 characters (not counting spaces), explain the project goals and outcomes in a language accessible to an undergraduate student familiar with basic ML concepts. Please also include one figure (picture, sketch, diagram, distribution...), which is catchy and easy to explain/understand with a short caption.
+In less than 1000 characters (not counting spaces), explain the project goals and outcomes in high level  language accessible to the CEO. Please also include one figure (picture, sketch, diagram, distribution...), which is catchy and easy to explain/understand with a short caption.
 
 %---------------------------------------------------------------------
 \newpage
@@ -66,6 +66,16 @@ In less than 1000 characters (not counting spaces), explain the project goals an
 \section{Introduction}
 \label{sec:introduction}
 %\input{introduction}
+%---------------------------------------------------------------------
+
+\section{Methodology}
+\label{sec:method}
+%\input{method}
+%---------------------------------------------------------------------
+
+\section{Results}
+\label{sec:results}
+%\input{results}
 %---------------------------------------------------------------------
 
 \section{Conclusion}

@@ -4,7 +4,7 @@
 %-------------------------------------------------------------------------
 \def\ATPackageVersion{00-00}
 
-\ProvidesClass{ucldiscdtlatex/latex/UCLCDTDISdoc}[2018/02/10 v.00-00 UCL CDT DIS document class]
+\ProvidesClass{latex/UCLCDTDISdoc}[2018/02/10 v.00-00 UCL CDT DIS document class]
 % Needs 2009 TeX Live or later
 \NeedsTeXFormat{LaTeX2e}[2009/01/01]
 
